@@ -1,0 +1,94 @@
+{
+    "products": [
+        {
+            "id": "011",
+            "name": "lemon fruit",
+            "category": "fruit",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        },
+        {
+            "id": "012",
+            "name": "lemon fruit",
+            "category": "vegetable",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        },
+        {
+            "id": "013",
+            "name": "lemon fruit",
+            "category": "juice",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        },
+        {
+            "id": "014",
+            "name": "lemon fruit",
+            "category": "dried-fruit",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        },
+        {
+            "id": "015",
+            "name": "lemon fruit",
+            "category": "dried-fruit",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        },
+        {
+            "id": "016",
+            "name": "lemon fruit",
+            "category": "vegetable",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        },
+        {
+            "id": "017",
+            "name": "lemon fruit",
+            "category": "juice",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        },
+        {
+            "id": "018",
+            "name": "lemon fruit",
+            "category": "fruit",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        },
+        {
+            "id": "019",
+            "name": "lemon fruit",
+            "category": "dried-fruit",
+            "image": "",
+            "cost": 15000,
+            "unit": "glass",
+            "discount": 50,
+            "price": 20000
+        }
+    ]
+}

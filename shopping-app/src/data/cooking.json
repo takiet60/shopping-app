@@ -1,0 +1,19 @@
+{
+    "cooking": [
+        {
+            "name": "Chicken biryani",
+            "desciption": "Biryani is a celebration of all that is great about Indian food – the heady aromas, the vibrant colours, the fluffy rice and those addictive curry flavours. Make this Chicken Biryani with your protein of choice – or try a vegetable biryani!",
+            "img": "assets/img/cook/chlcken-biryani.jpg"
+        },
+        {
+            "name": "BBQ",
+            "desciption": "Barbecuing without a lid means that you lose heat and all that lovely smoky flavour disappears into thin air. Cooking the Weber way, with the lid on, allows the food to cook evenly, the temperature is controlled and you don’t risk scorching your food with flare-ups.",
+            "img": "assets/img/cook/bbq.jpg"
+        },
+        {
+            "name": "Spaghetti'",
+            "desciption": "The most popular way to cook spaghetti is simple. Put the pasta into plenty of boiling water, stir it, bring it to a simmer, turn the heat off, put a lid on and leave it to finish cooking for 10-12 mins. This method works perfectly fine.",
+            "img": "assets/img/cook/spaghetti.jpg"
+        }
+    ]
+}

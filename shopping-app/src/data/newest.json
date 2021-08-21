@@ -1,0 +1,60 @@
+{
+    "newest": [
+        {
+            "id": 1,
+            "name": "Carot from Da Lat",
+            "img": "assets/img/newest/carrot.jpg",
+            "description": "Carrot was growed in Da Lat, where have the best ground to plant vegetables.",
+            "price": 15000,
+            "unit": "kg",
+            "location": [
+                "HCM city",
+                "Ha Noi",
+                "Da Nang"
+            ],
+            "review": 34
+        },
+        {
+            "id": 2,
+            "name": "Orange",
+            "img": "assets/img/newest/orange.jpg",
+            "description": "Organe from Da Lat, which keep fresh vitamin, nutrition and the newest juice.",
+            "price": 35000,
+            "unit": "kg",
+            "location": [
+                "HCM city",
+                "Ha Noi",
+                "Da Nang"
+            ],
+            "review": 46
+        },
+        {
+            "id": 3,
+            "name": "Lemon",
+            "img": "assets/img/products/lemon-juice.jpg",
+            "description": "Lemon was harvested from huge lemon huge in around Viet Nam country.",
+            "price": 10000,
+            "unit": "kg",
+            "location": [
+                "HCM city",
+                "Ha Noi",
+                "Da Nang"
+            ],
+            "review": 34
+        },
+        {
+            "id": 4,
+            "name": "Onion",
+            "img": "assets/img/newest/onion.jpg",
+            "description": "Onion is ingredient in recipe how to cooking better.",
+            "price": 5000,
+            "unit": "kg",
+            "location": [
+                "HCM city",
+                "Ha Noi",
+                "Da Nang"
+            ],
+            "review": 34
+        }
+    ]
+}
