@@ -5,11 +5,11 @@ import { HiLocationMarker } from 'react-icons/hi'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { FaShoppingCart } from 'react-icons/fa'
 import { buyItem } from '../redux'
+import { removeItem } from '../redux'
 import { connect } from 'react-redux'
 
 function Product(props) {
     const { name, img, price, description, location, unit, review } = props
-
     const handleSubmit = (e) => {
         e.preventDefault()
     }
@@ -47,10 +47,6 @@ function Product(props) {
         item.quantity = number.value
         props.buyItem(item)
     }
-
-
-
-
     return (
         <div className="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
             <div className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
@@ -108,7 +104,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        buyItem: (item) => dispatch(buyItem(item))
+        buyItem: (item) => dispatch(buyItem(item)),
+        removeItem: (id) => dispatch(removeItem(id))
     }
 }
 

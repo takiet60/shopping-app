@@ -4,6 +4,7 @@ import FormatNumber from '../services/FormatNumber'
 import { GiCancel } from 'react-icons/gi'
 import { ImBin, ImPencil } from 'react-icons/im'
 import { buyItem } from '../redux'
+import { removeItem } from '../redux'
 import { connect } from 'react-redux'
 
 function CartScreen(props) {
@@ -42,6 +43,10 @@ function CartScreen(props) {
         return provisional() + tax() - discount()
     }
 
+    const removeItemFromCart = (id) => {
+        props.removeItem(id)
+    }
+
     return (
         <div className="mt-32 max-w-screen-xl mx-auto mb-3">
             <h1 className="text-center text-xl font-semibold my-5">Cart screen</h1>
@@ -76,12 +81,17 @@ function CartScreen(props) {
                                         <span className="lg:hidden">Total: </span><span>{FormatNumber(item._quantity * item._price)}</span>
                                         <div className="hidden lg:flex lg:w-12 lg:justify-between">
                                             <button
-                                                className="hover:text-red-600"><ImBin className="inline-block" /></button>
+                                                onClick={() => removeItemFromCart(item._id)}
+                                                className="hover:text-red-600">
+                                                <ImBin className="inline-block" />
+                                            </button>
                                             <button className="hover:text-green-600"><ImPencil className="inline-block" /></button>
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-between lg:hidden">
-                                        <button><GiCancel className="inline-block"></GiCancel></button>
+                                        <button onClick={() => removeItemFromCart(item._id)}>
+                                            <GiCancel className="inline-block"></GiCancel>
+                                        </button>
                                         <button className="text-xs">Buy later</button>
                                     </div>
                                 </div>
@@ -112,7 +122,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        buyItem: (item) => dispatch(buyItem(item))
+        buyItem: (item) => dispatch(buyItem(item)),
+        removeItem: (id) => dispatch(removeItem(id))
     }
 }
 

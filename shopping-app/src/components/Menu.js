@@ -60,28 +60,20 @@ function Menu(props) {
                         <FaShoppingCart className="inline-block " /> ({cart.length})
                         <div className={`${isVisibleCart ? "dropdown absolute left-0 top-10 rounded" : "hidden "}`}>
                             <ul>
-                                <li className="bg-gray-50 w-28 py-3 hover:bg-gray-400 flex justify-between " >
-                                    <img src={'assets/img/newest/carrot.jpg'}
-                                        alt="carrot"
-                                        className="object-contain h-5 w-auto rounded"
-                                    />
-                                    <span className="text-sm">Carrot x2</span>
-                                </li>
-                                <li className="bg-gray-50 w-28 py-3 hover:bg-gray-400 flex justify-between " >
-                                    <img src={'assets/img/newest/carrot.jpg'}
-                                        alt="carrot"
-                                        className="object-contain h-5 w-auto rounded"
-                                    />
-                                    <span className="text-sm">Carrot x2</span>
-                                </li>
-                                <li className="bg-gray-50 w-28 py-3 hover:bg-gray-400 flex justify-between " >
-                                    <img src={'assets/img/newest/carrot.jpg'}
-                                        alt="carrot"
-                                        className="object-contain h-5 w-auto rounded"
-                                    />
-                                    <span className="text-sm">Carrot x2</span>
-                                </li>
-                            </ul>
+                                {
+                                    cart.map(item => {
+                                        return (
+                                            <li key={item._id} className="bg-gray-50 w-28 py-3 hover:bg-gray-400 flex justify-between " >
+                                                <img src={item._img}
+                                                    alt="carrot"
+                                                    className="object-contain h-5 w-auto rounded"
+                                                />
+                                                <span className="text-sm">{item._name} x{item._quantity}</span>
+                                            </li>
+                                        )
+                                    })
+                                }
+                                s                            </ul>
                             <Link to="/cart" className="bg-gray-200 w-28 py-3 hover:bg-gray-400">Go to cart</Link>
                         </div>
                     </span>
