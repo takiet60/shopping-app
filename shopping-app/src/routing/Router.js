@@ -7,6 +7,7 @@ import { BlogScreen } from '../screens/BlogScreen';
 import { ProductsScreen } from '../screens/ProductsScreen';
 import { ScreenPageNotFound } from '../screens/ScreenPageNotFound';
 import CartScreen from '../screens/CartScreen';
+import CheckoutScreen from '../screens/CheckoutScreen';
 
 export const RouterPage = () => {
     return (
@@ -25,6 +26,9 @@ export const RouterPage = () => {
                     </Route>
                     <Route path="/cart">
                         <CartScreen />
+                    </Route>
+                    <Route path="/checkout">
+                        <CheckoutScreen />
                     </Route>
                     <Route path="*">
                         <ScreenPageNotFound />

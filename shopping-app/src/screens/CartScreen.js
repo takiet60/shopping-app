@@ -6,6 +6,7 @@ import { ImBin, ImPencil } from 'react-icons/im'
 import { buyItem } from '../redux'
 import { removeItem } from '../redux'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 function CartScreen(props) {
 
@@ -105,7 +106,7 @@ function CartScreen(props) {
                         <p className="mb-2">Tax(15%): {FormatNumber(tax())}</p>
                         <p className="mb-2">Discount: {FormatNumber(discount())}</p>
                         <p className="mb-2 border-t border-gray-600 pt-2">Total: {FormatNumber(total())}</p>
-                        <button className="bg-green-600 px-10 py-2 w-full font-semibold hover:bg-green-800">Check out</button>
+                        <Link to="/checkout" className="bg-green-600 px-24 py-2  font-semibold hover:bg-green-800">Check out</Link>
                     </div>
                 </div>
             </div>
