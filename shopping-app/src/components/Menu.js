@@ -81,8 +81,8 @@ function Menu(props) {
                         <IoPersonCircleSharp className="inline-block " />
                         <div className={`${isInfor ? "dropdown absolute left-0 top-10 rounded flex flex-col" : "hidden "}`}>
                             <p>Hello Hna Teik</p>
-                            <a href="https://www.google.com/">Login</a>
-                            <a href="https://www.google.com/">Register</a>
+                            <Link to="/login">Login</Link>
+                            <Link to="/register">Register</Link>
                         </div>
                     </span>
                     <button onClick={onToggleMenu}><GiHamburgerMenu className="inline-block lg:hidden text-xl" /></button>

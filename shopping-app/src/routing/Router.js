@@ -8,6 +8,8 @@ import { ProductsScreen } from '../screens/ProductsScreen';
 import { ScreenPageNotFound } from '../screens/ScreenPageNotFound';
 import CartScreen from '../screens/CartScreen';
 import CheckoutScreen from '../screens/CheckoutScreen';
+import RegisterScreen from '../screens/RegisterScreen';
+import LoginScreen from '../screens/LoginScreen';
 
 export const RouterPage = () => {
     return (
@@ -29,6 +31,12 @@ export const RouterPage = () => {
                     </Route>
                     <Route path="/checkout">
                         <CheckoutScreen />
+                    </Route>
+                    <Route path="/register">
+                        <RegisterScreen />
+                    </Route>
+                    <Route path="/login">
+                        <LoginScreen />
                     </Route>
                     <Route path="*">
                         <ScreenPageNotFound />
