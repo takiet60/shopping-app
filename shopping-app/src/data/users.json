@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": "us123",
+      "firstName": "Ta",
+      "lastName": "Anh Kiet",
+      "email": "anhkiet@gmail.com",
+      "password": "123456",
+      "province": "Binh Duong",
+      "district": "Di An",
+      "subDistrict": "An Binh",
+      "numberAddress": "7/19/10 Binh Duong 3",
+      "phoneNumber": "0385883948"
+    },
+    {
+      "firstName": "Tạ ",
+      "lastName": "Anh Kiệt",
+      "email": "double@gmail.com",
+      "password": "ancde12345",
+      "province": "Binh Duong",
+      "district": "Di An",
+      "subDistrict": "An Binh",
+      "numberAddress": "7/19/10 Binh Duong 3",
+      "phoneNumber": "0385883948",
+      "id": "05dp2pm"
+    },
+    {
+      "firstName": "Tạ ",
+      "lastName": "Anh Kiệt",
+      "email": "double@gmail.com",
+      "password": "ancde12345",
+      "province": "Binh Duong",
+      "district": "Di An",
+      "subDistrict": "An Binh",
+      "numberAddress": "7/19/10 Binh Duong 3",
+      "phoneNumber": "0385883948",
+      "id": "Hsj2HO8"
+    },
+    {
+      "firstName": "abc",
+      "lastName": "xyz",
+      "email": "abcxyz@gmail.com",
+      "password": "abcde",
+      "province": "HCM",
+      "district": "ADSF",
+      "subDistrict": "ASDF",
+      "numberAddress": "asdf",
+      "phoneNumber": "09213123123",
+      "id": "IJPbFPe"
+    }
+  ]
+}
