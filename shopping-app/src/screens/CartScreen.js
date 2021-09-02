@@ -117,7 +117,7 @@ function CartScreen(props) {
 
 const mapStateToProps = (state) => {
     return {
-        cart: state
+        cart: state.cartState
     }
 }
 

@@ -5,6 +5,7 @@ import { IoPersonCircleSharp } from 'react-icons/io5'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { FaShoppingCart } from 'react-icons/fa'
 import { buyItem } from '../redux'
+import { logout } from '../redux'
 import { connect } from 'react-redux'
 
 function Menu(props) {
@@ -15,6 +16,7 @@ function Menu(props) {
     const [isInfor, setIsInfor] = useState(false)
     const [searchText, setSearchText] = useState({ value: '' });
     const cart = props.cart
+    const user = props.user
 
     const onToggleMenu = (e) => {
         e.preventDefault();
@@ -31,6 +33,7 @@ function Menu(props) {
 
     useEffect(() => {
         window.addEventListener('scroll', controlNavbar)
+
         return () => {
             window.removeEventListener('scroll', controlNavbar)
         };
@@ -45,6 +48,25 @@ function Menu(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
     }
+
+    const renderWelcome = () => {
+        if (!user.logged) {
+            return (<>
+                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
+            </>
+            )
+        }
+        else {
+            return (
+                <>
+                    <p>Welcome {user.firstName} {user.lastName}</p>
+                    <button onClick={() => props.logout()}>Logout</button>
+                </>
+            )
+        }
+    }
+
     return (
         <div className={`duration-500 ${show && "fixed top-0 w-screen bg-gray-100 z-10 m-auto"}`}>
             <nav className=" z-10 max-w-screen-xl mx-auto   py-5 flex items-center justify-between">
@@ -73,16 +95,15 @@ function Menu(props) {
                                         )
                                     })
                                 }
-                                s                            </ul>
+                            </ul>
                             <Link to="/cart" className="bg-gray-200 w-28 py-3 hover:bg-gray-400">Go to cart</Link>
                         </div>
                     </span>
                     <span onClick={() => setIsInfor(!isInfor)} className=" p-2 cursor-pointer relative inline-block">
                         <IoPersonCircleSharp className="inline-block " />
                         <div className={`${isInfor ? "dropdown absolute left-0 top-10 rounded flex flex-col" : "hidden "}`}>
-                            <p>Hello Hna Teik</p>
-                            <Link to="/login">Login</Link>
-                            <Link to="/register">Register</Link>
+                            {renderWelcome()}
+
                         </div>
                     </span>
                     <button onClick={onToggleMenu}><GiHamburgerMenu className="inline-block lg:hidden text-xl" /></button>
@@ -108,13 +129,15 @@ function Menu(props) {
 
 const mapStateToProps = (state) => {
     return {
-        cart: state.cart
+        cart: state.cartState.cart,
+        user: state.userState.user
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        buyItem: () => dispatch(buyItem())
+        buyItem: () => dispatch(buyItem()),
+        logout: () => dispatch(logout())
     }
 }
 

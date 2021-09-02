@@ -98,7 +98,7 @@ function Product(props) {
 
 const mapStateToProps = (state) => {
     return {
-        cart: state.cart
+        cart: state.cartState.cart
     }
 }
 
