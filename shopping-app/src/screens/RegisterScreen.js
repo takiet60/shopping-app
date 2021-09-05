@@ -102,6 +102,8 @@ function RegisterScreen() {
                                                     onChange={handleChange}
                                                 />
                                             </div>
+                                            <input className="mt-3 mr-3" enable type="checkbox" name="validate" id="" />
+                                            <span name="validate" className="text-gray-400">Validate email</span>
                                         </div>
                                     </div>
                                     <div className="flex -mx-3">

@@ -100,13 +100,13 @@ function CartScreen(props) {
                         })
                     }
                 </div>
-                <div className="text-sm text-left w-72 mx-auto font-medium bg-gray-200 py-3 shadow-md h-48">
+                <div className="text-gray-500 rounded-3x shadow-xl  text-left w-72 mx-auto font-medium overflow-hidden bg-gray-100 py-3 h-48">
                     <div className="ml-2 mr-2">
                         <p className="mb-2">Provisional: <span>{FormatNumber(provisional())}</span></p>
                         <p className="mb-2">Tax(15%): {FormatNumber(tax())}</p>
                         <p className="mb-2">Discount: {FormatNumber(discount())}</p>
                         <p className="mb-2 border-t border-gray-600 pt-2">Total: {FormatNumber(total())}</p>
-                        <Link to="/checkout" className="bg-green-600 px-24 py-2  font-semibold hover:bg-green-800">Check out</Link>
+                        <Link to="/checkout" className="bg-green-600 px-20 py-2 mt-5 text-gray-200 mx-auto font-semibold hover:bg-green-800">Check out</Link>
                     </div>
                 </div>
             </div>

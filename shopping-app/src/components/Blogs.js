@@ -29,16 +29,16 @@ export const Blogs = () => {
 
             <h1 className="text-4xl font-bold text-center my-10">Cooking Blogs</h1>
             <Carousel
-                swipeable={false}
+                swipeable={true}
                 draggable={false}
-                showDots={true}
+                showDots={false}
                 responsive={responsiveBlog}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlaySpeed={1000}
                 keyBoardControl={true}
                 customTransition="all .5"
-                transitionDuration={500}
+                transitionDuration={1000}
                 containerClass="carousel-container"
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"

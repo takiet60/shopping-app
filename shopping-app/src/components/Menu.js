@@ -52,8 +52,8 @@ function Menu(props) {
     const renderWelcome = () => {
         if (!user.logged) {
             return (<>
-                <Link to="/login">Login</Link>
-                <Link to="/register">Register</Link>
+                <Link to="/login" className="pb-3 border border-green-400 border-b-2 bg-gray-200">Login</Link>
+                <Link to="/register" className="pb-3 border border-green-400 border-b-2 bg-gray-200">Register</Link>
             </>
             )
         }
@@ -61,7 +61,7 @@ function Menu(props) {
             return (
                 <>
                     <p>Welcome {user.firstName} {user.lastName}</p>
-                    <button onClick={() => props.logout()}>Logout</button>
+                    <button onClick={() => props.logout()} className="pb-3 border border-green-400 border-b-2 bg-gray-200">Logout</button>
                 </>
             )
         }
